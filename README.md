@@ -1,2 +1,2 @@
 # CSS-Animation-Tutorial
-Simple Codes to define the CSS animation techniques
+Simple HTML and CSS code to learn about the CSS animation techniques
