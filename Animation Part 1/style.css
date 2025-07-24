@@ -1,0 +1,48 @@
+.box {
+    width: 100px;
+    background: red;
+    height: 100px;
+
+    animation-name: bg-color-change;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: 2;
+    /* animation-fill-mode: backwards; */
+}
+
+@keyframes bg-color-change {
+    from {
+        background: red;
+    }
+
+    to {
+        background: yellow;
+    }
+}
+
+
+.box-1 {
+    width: 20px;
+    height: 10px;
+    background: green;
+
+    animation-name: grow-width;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+
+@keyframes grow-width {
+    from {
+        width: 20px;
+        height: 10px;
+        background: green;
+    }
+
+    to {
+        width: 100px;
+        height: 100px;
+        background: black;
+    }
+}

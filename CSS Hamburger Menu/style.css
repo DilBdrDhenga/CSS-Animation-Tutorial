@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+    What to do
+        -> to check state 
+        -> to select list-items if the checkbox is clicked
+*/
+
+.container {
+    /* border: 2px solid red; */
+    position: relative;
+    /* margin: 20px 20px; */
+
+}
+
+.list-items {
+    padding-top: 80px;
+    transform: translateX(-120%);
+    transition: transform .3s ease-in-out;
+    /* border: 2px solid green; */
+    padding-left: 20px;
+    margin-top: -15px;
+    background: #232323;
+    margin-left: -15px;
+    padding-bottom: 15px;
+    color: #fff;
+    max-width: 500px;
+    width: 90%;
+
+}
+
+.list-items li {
+    list-style: none;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.container input[type="checkbox"]:checked~.list-items {
+    /* display: block; */
+    transform: translateX(0);
+}
+
+.container input[type="checkbox"]:checked~.hamburger-lines .line {
+    background: #fff;
+}
+
+.container input[type="checkbox"] {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 32px;
+
+    top: 18px;
+    left: 5px;
+
+
+    z-index: 2;
+    opacity: 0;
+
+}
+
+
+.hamburger-lines {
+    /* background: lightblue; */
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: 20px;
+    left: 9px;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.hamburger-lines .line {
+    background: #232323;
+    display: block;
+    width: 100%;
+    height: 5px;
+}
+
+.hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform .1s ease-in-out;
+}
+
+.hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform .1s ease-in-out;
+}
+
+
+
+.container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+
+.container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+    display: none;
+}
+
+.container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+
+.hamburger-lines .line1 {
+    transform: rotate(20);
+}

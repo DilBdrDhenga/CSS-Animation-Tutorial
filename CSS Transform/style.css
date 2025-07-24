@@ -1,0 +1,76 @@
+/* 
+    CSS Transform has property as :- 
+        -> rotate
+        -> skew
+        -> scale
+        -> translate
+
+    We use transform with transition property
+*/
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    margin: 100px auto;
+    font-size: 1.5rem;
+
+    /* At first the box rotates with the origin center, to change it  */
+    transform-origin: right bottom;
+    /* transform: rotate(280deg); */
+
+    transform-origin: 100% 0%;
+    /* (left => 0%, right => 100%), (top => 0%, bottom => 100%)*/
+
+    /* defining transition property */
+    transition: transform 1s ease-in-out 1s;
+}
+
+/* Rotate Property */
+.box:hover {
+    transform: rotate(280deg);
+    /* transform: rotate(-180deg); */
+}
+
+
+/*
+Scale Property  -> used to grow the height or width 
+                -> we use 'scaleX(2)' to increase the width by 2 times
+                -> we use 'scaleY(2)' to increase the height by 2 times
+                -> if we want to increase both the height and the width, we use 'scale(2)'
+
+*/
+
+.box:hover {
+    /* transform: scale(3); */
+    /* transform: scaleX(3); */
+    /* transform: scaleY(2); */
+
+    transform: scale(5, 3);
+    /* ie. width , height */
+}
+
+
+
+
+/* 
+    Translate Property -> used to change the position either in X-direction or in Y-direction or in both direction
+*/
+.box:hover {
+    transform: translate(100px, 200px);
+    /* x-direction, Y-direction */
+    /* transform: translateX(200px); */
+    /* transform: translateY(300px); */
+}
+
+
+
+/* 
+    Skew Property -> used to tilt the content
+
+*/
+.box:hover {
+    transform: skew(20deg, 30deg);
+    /* transform: skewX(10deg); */
+    /* transform: skewY(10deg); */
+}
